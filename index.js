@@ -46,6 +46,10 @@ module.exports = opts => buf => {
 	if (opts.verbose) {
 		args.push('--verbose');
 	}
+	
+	if (opts.strip) {
+		args.push('--strip');
+	}
 
 	return execBuffer({
 		input: buf,
