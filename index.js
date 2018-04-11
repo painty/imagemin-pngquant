@@ -46,6 +46,14 @@ module.exports = opts => buf => {
 	if (opts.verbose) {
 		args.push('--verbose');
 	}
+	
+	if (opts.strip) {
+		args.push('--strip');
+	}
+
+	if (opts['skip-if-larger']) {
+		args.push('--skip-if-larger');
+	}
 
 	return execBuffer({
 		input: buf,
